@@ -29,4 +29,15 @@ pipeline {
             }
         }
     }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+         failure { 
+            echo 'Build is failed!'
+        }
+         success { 
+            echo 'Build is success!'
+        }
+    }
 }
