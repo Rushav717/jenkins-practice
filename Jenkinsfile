@@ -4,7 +4,11 @@ pipeline {
         PROJECT = 'EXPENSE'
         COMPONENT = 'BACKEND'
     }
-    options { disableConcurrentBuilds() }
+    options 
+    { 
+        disableConcurrentBuilds()
+        timeout(time: 5, unit: 'SECONDS') 
+    }
     stages {
         stage('Build') {
             steps {
